@@ -18,28 +18,6 @@ import {
 import { WeatherBlock, WeatherBlockNow } from "./WeatherBlock";
 import ThemePicker from "./ThemePicker";
 
-/*const Input_Container = styled.div`
-	width: 48%;
-	color: #fff;
-	font-size: 20px;
-	margin-top: 50px;
-`;
-
-const Button = styled.button`
-	width: 200px;
-	height: 50px;
-	font-size: 16px;
-	background: #0071bc;
-	border-radius: 4px;
-	border: none;
-	color: white;
-	outline: none;
-
-	&:hover {
-		background: #025790;
-	}
-`;*/
-
 const ForeCastContainer = styled.div`
 	${h_box_base} padding: 30px 0;
 	max-width: 800px;
@@ -78,42 +56,11 @@ const CityName = styled.div`
 class App extends Component {
 	constructor(props) {
 		super(props);
-		/*this.state = {
-			distance: 0
-		};*/
 	}
 
 	componentDidMount() {
 		this.props.getFCastData();
 	}
-
-	/*componentDidUpdate(prevProps) {
-		if (prevProps.distance !== this.props.distance) {
-			this.test(this.props.distance);
-		}
-	}
-
-	calcDistance = event => {
-		const lat1 = parseFloat(this.props.airportFrom.lat);
-		const lng1 = parseFloat(this.props.airportFrom.lng);
-		const lat2 = parseFloat(this.props.airportTo.lat);
-		const lng2 = parseFloat(this.props.airportTo.lng);
-		if (lat1 && lat2) {
-			this.props.calculatedDistance(calcDistance(lat1, lng1, lat2, lng2));
-		}
-	};
-
-	test = distance => {
-		this.setState({ distance: 0 });
-		let interval;
-		interval = setInterval(() => {
-			if (this.state.distance < this.props.distance) {
-				this.setState({ distance: this.state.distance + 10 });
-			} else {
-				clearInterval(interval);
-			}
-		}, 2);
-	};*/
 
 	render() {
 		let content;
@@ -162,16 +109,12 @@ class App extends Component {
 
 const mapStateToProps = state => ({
 	forecastData: state.forecastData,
-	currentData: state.currentData,
 	theme: state.theme
 });
 
 const mapDispatchToProps = dispatch => ({
 	getFCastData() {
 		dispatch(getForeCastData());
-	},
-	getCurrData() {
-		dispatch(getCurrentData());
 	}
 });
 
