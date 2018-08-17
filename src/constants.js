@@ -1,0 +1,3 @@
+export const ADD_FORECAST_DATA = 'ADD_FORECAST_DATA';
+export const ADD_CURRENT_DATA = 'ADD_CURRENT_DATA';
+export const SET_THEME = 'SET_THEME';
