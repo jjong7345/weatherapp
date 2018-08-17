@@ -63,7 +63,7 @@ const Condition = styled.div`
 
 const ConditionNow = styled.div`
 	font-weight: 100;
-	font-size: 30px;
+	font-size: 25px;
 	opacity: 0.5;
 `;
 

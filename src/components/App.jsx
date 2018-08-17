@@ -54,6 +54,27 @@ const MenuTitle = styled.div`
 	margin: 5px 0;
 `;
 
+const CityInput = styled.input`
+	font-size: 20px;
+	color: #000;
+	font-weight: 100;
+	font-style: italic;
+	margin: 15px 0 25px;
+	width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid red;
+`;
+
+const CityName = styled.div`
+	font-size: 18px;
+	color: #FFF;
+	font-weight: 800;
+	width: 100%;
+	text-align: center;
+	opacity: 0.7;
+`;
+
 class App extends Component {
 	constructor(props) {
 		super(props);
@@ -128,10 +149,12 @@ class App extends Component {
 			<div className="main" style={{ background: this.props.theme }}>
 				<Menu>
 					<MenuTitle>Select a City</MenuTitle>
+					<CityInput value="New York, NY" onChange={() => { return false }} />
 					<MenuTitle>Theme</MenuTitle>
 					<ThemePicker />
 				</Menu>
 				<div className="content">{content}</div>
+				<CityName>New York, NY</CityName>
 			</div>
 		);
 	}
