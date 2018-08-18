@@ -375,7 +375,8 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  color: #fff;
+  color: #FFF;
+  background: #C34D40;
 }
 
 #app {
@@ -392,7 +393,6 @@ body {
   align-items: stretch;
   display: flex;
   padding: 50px 0;
-  background: #C34D40;
 }
 
 .content {

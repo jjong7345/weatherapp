@@ -62,6 +62,12 @@ class App extends Component {
 		this.props.getFCastData();
 	}
 
+	componentDidUpdate(prevProps) {
+		if (prevProps.theme !== this.props.theme) {
+			document.body.style.backgroundColor = this.props.theme;
+		}
+	}
+
 	render() {
 		let content;
 		if (this.props.forecastData) {
@@ -93,7 +99,7 @@ class App extends Component {
 			);
 		}
 		return (
-			<div className="main" style={{ background: this.props.theme }}>
+			<div className="main">
 				<Menu>
 					<MenuTitle>Select a City</MenuTitle>
 					<CityInput value="New York, NY" onChange={() => { return false }} />
