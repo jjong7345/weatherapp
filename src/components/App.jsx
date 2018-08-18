@@ -51,6 +51,7 @@ const CityName = styled.div`
 	width: 100%;
 	text-align: center;
 	opacity: 0.7;
+	padding: 0 0 50px;
 `;
 
 class App extends Component {

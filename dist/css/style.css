@@ -474,9 +474,6 @@ body {
 }
 
 @media (max-width: 1040px) {
-  #app {
-    height: auto;
-  }
   .main {
     justify-content: flex-start;
   }
